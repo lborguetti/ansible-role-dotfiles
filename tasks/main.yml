@@ -5,6 +5,7 @@
     path: "{{ home_path }}"
   become: false
   register: home
+  tags: dotfiles
 
 - name: create home directory
   file:
@@ -23,5 +24,6 @@
   with_items:
     - bashrc
     - tmux.conf
+    - gitconfig
   become: false
   tags: dotfiles
