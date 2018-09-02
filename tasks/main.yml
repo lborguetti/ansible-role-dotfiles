@@ -1,0 +1,27 @@
+---
+# tasks file for ansible-role-dotfiles
+- name: check if home directory exists
+  stat:
+    path: "{{ home_path }}"
+  become: false
+  register: home
+
+- name: create home directory
+  file:
+    path: "{{ home_path }}/bin"
+    state: directory
+    mode: 0755
+  become: false
+  when: not home.stat.exists
+  tags: dotfiles
+
+- name: ensure copy dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: "{{ home_path }}/.{{ item }}"
+    mode: 0644
+  with_items:
+    - bashrc
+    - tmux.conf
+  become: false
+  tags: dotfiles

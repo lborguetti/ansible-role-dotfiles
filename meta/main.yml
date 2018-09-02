@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Luciano Antonio Borguetti Faustino <lborguetti at GitHub>
+  company: Cultura DevOps
+  issue_tracker_url: https://github.com/lborguetti/ansible-role-dotfiles/issues
+  license: license (MIT)
+  min_ansible_version: 2.4
+  platforms:
+    - name: Fedora
+      versions:
+        - 28
+  galaxy_tags:
+    - fedora
+    - dotfiles

@@ -1,0 +1,3 @@
+---
+# vars file for ansible-role-dotfiles
+home_path: "{{ lookup('env', 'HOME') }}"
