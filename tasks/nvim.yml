@@ -77,6 +77,17 @@
     - dotfiles
     - nvim
 
+- name: create nvim plugins directory
+  file:
+    path: "{{ home_path }}/.local/share/nvim/site/plugged/"
+    state: directory
+    mode: 0755
+  become: false
+  when: not plugged.stat.exists
+  tags:
+    - dotfiles
+    - nvim
+
 - name: ensure install nvim plugins
   shell: "nvim +{{ item }} +qall"
   with_items:

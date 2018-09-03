@@ -15,6 +15,12 @@ Role Variables
 
 None.
 
+Role Tags
+--------------
+
+- `dotfiles`: only run dotfiles tasks.
+- `nvim`: only run nvim tasks.
+
 Dependencies
 ------------
 
