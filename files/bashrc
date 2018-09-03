@@ -47,3 +47,6 @@ alias h="sudo nvim /etc/hosts"
 # pbcopy/pbpaste
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# load virtualenv
+alias venv='v=".venv/bin/activate"; if [ -e ${v} ]; then source ${v} ]; else echo "virtualenv not found in current dir"; fi'
