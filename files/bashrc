@@ -10,7 +10,7 @@ test -e ${HOME}/.local/share/git/git-prompt.sh && status=0
 if [ "x${status}" != "x0" ] ; then
   curl --create-dirs -o ${HOME}/.local/share/git/git-prompt.sh \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-fi 
+fi
 source ${HOME}/.local/share/git/git-prompt.sh
 export PS1='┌─[\[\e[38;5;32m\]\w\[\e[0m\]\[\e[38;5;240m\]$(__git_ps1 " (%s)")\[\e[0m\]]\n└─╼ '
 
@@ -50,3 +50,6 @@ alias pbpaste='xsel --clipboard --output'
 
 # load virtualenv
 alias venv='v=".venv/bin/activate"; if [ -e ${v} ]; then source ${v} ]; else echo "virtualenv not found in current dir"; fi'
+
+# system update/upgrade
+alias dnf-update="sudo dnf update --enablerepo google-chrome,fedora-cisco-openh264"
