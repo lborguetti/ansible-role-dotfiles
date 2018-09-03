@@ -27,3 +27,9 @@
     - gitconfig
   become: false
   tags: dotfiles
+
+- name: import nvim tasks
+  import_tasks: nvim.yml
+  tags:
+    - dotfiles
+    - nvim
