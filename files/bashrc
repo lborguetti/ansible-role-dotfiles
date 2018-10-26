@@ -55,4 +55,4 @@ alias venv='v=".venv/bin/activate"; if [ -e ${v} ]; then source ${v} ]; else ech
 alias dnf-update="sudo dnf update --enablerepo google-chrome,fedora-cisco-openh264"
 
 # st
-st -f 'Monospace-12'
+alias st='st -f "Monospace-12"'
