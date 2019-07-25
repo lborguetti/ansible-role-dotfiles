@@ -33,7 +33,7 @@ export SYSTEMD_PAGER=
 alias vpn="sudo openvpn --cd $HOME/.config/openvpn --config rohan.ovpn"
 
 # myip
-alias myip='dig +short www.google.com @8.8.8.8'
+alias myip='curl ifconfig.co'
 
 # encfs
 alias encfs_mount="ENCFS6_CONFIG=$HOME/.config/encfs6.xml encfs $HOME/Dropbox/Work $HOME/Private"
